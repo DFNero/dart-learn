@@ -2,8 +2,8 @@ void main() {
   String name = 'Abby';
   String hobby = "main dan makan";
   String jenis_kelamin = '''laki-laki''';
-  print("hurufname.length);
-  print(hobby.contains('Man'));
+  print("nama ku terdiri dari ${name.length} huruf");
+  print(hobby.contains('main'));
   print(name.toLowerCase());
   print(name.toUpperCase());
   print(jenis_kelamin.startsWith('l'));
