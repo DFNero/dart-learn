@@ -44,17 +44,33 @@ class Profile {
 }
 
 void main() {
-  Profile profile =
-      Profile(); //pemahaman nya seperti [className objectName = className();] || atau kalau belum paham kayak gini versi ku [Obj1 ObjClass = Obj1();]
+  Profile profile = Profile(); //pemahaman nya seperti [className objectName = className();] || atau kalau belum paham kayak gini versi ku [Obj1 ObjClass = Obj1();]
 
-  stdout.write('Masukkan nama karakter: ');
-  profile.nama = stdin.readLineSync()!;
+  // stdout.write('Masukkan nama karakter: ');
+  // profile.nama = stdin.readLineSync()!;
 
-  stdout.write('Masukkan level karakter: ');
-  profile.level = int.parse(stdin.readLineSync()!);
+  // stdout.write('Masukkan level karakter: ');
+  // profile.level = int.parse(stdin.readLineSync()!);
 
-  stdout.write('Masukkan mau berapa kekayaan: ');
-  profile.kekayaan = int.parse(stdin.readLineSync()!);
+  // stdout.write('Masukkan mau berapa kekayaan: ');
+  // profile.kekayaan = int.parse(stdin.readLineSync()!);
 
-  profile.tampilkanProfil();
+  // profile.tampilkanProfil();
+
+  stdout.write('start\n 1. login profil\n 2. start adventure\n 3. shop\n 4. inventory\n 5. exit\n');
+  String? inputUser = stdin.readLineSync();
+  switch (inputUser) {
+    case '1':
+      stdout.write('Masukkan nama karakter: ');
+      profile.nama = stdin.readLineSync()!;
+
+      stdout.write('Masukkan level karakter: ');
+      profile.level = int.parse(stdin.readLineSync()!);
+
+      stdout.write('Masukkan mau berapa kekayaan: ');
+      profile.kekayaan = int.parse(stdin.readLineSync()!);
+
+      profile.tampilkanProfil();
+      break;
+  }
 }
