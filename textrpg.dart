@@ -72,5 +72,10 @@ void main() {
 
       profile.tampilkanProfil();
       break;
+    case '2':
+      stdout.write('Adventure started!\n');
+      break;
+    case '3':
+    break;
   }
 }
