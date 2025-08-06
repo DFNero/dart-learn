@@ -15,9 +15,7 @@ class Profile {
 }
 
 void main() {
-  Profile profile = Profile(); /*pemahaman nya seperti [className objectName = className();]
-                               * atau kalau belum paham kayak gini versi ku [Obj1 ObjClass = Obj1();]
-                               */
+  Profile profile = Profile(); //pemahaman nya seperti [className objectName = className();] || atau kalau belum paham kayak gini versi ku [Obj1 ObjClass = Obj1();]
 
 
   stdout.write('Masukkan nama karakter: ');
