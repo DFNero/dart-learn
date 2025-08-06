@@ -1,6 +1,17 @@
 import 'dart:io';
 
 
+class chestGold{
+  int woodChest = 150; //gold wood chest
+  int bigChest = 500; //gold big chest
+  int goldChest = 1000; //gold gold chest
+}
+
+class basedGold{
+  int goblin = 500; //gold goblin
+  int orc = 1000; //gold orc
+  int undead = 1500; //gold undead
+}
 
 class basedExp {
   int found = 200; //exp found
