@@ -33,7 +33,9 @@ class Profile {
   void tampilkanProfil() {
     print('');
     print('╔══════════════════════════════════════════════════╗');
-    print('║          🕯️        𝕻𝖗𝖔𝖋𝖎𝖑 𝕶𝖆𝖗𝖆𝖐𝖙𝖊𝖗      🕯️         ║');
+    print(
+      '║          🕯️        𝕻𝖗𝖔𝖋𝖎𝖑 𝕶𝖆𝖗𝖆𝖐𝖙𝖊𝖗      🕯️         ║',
+    );
     print('╠══════════════════════════════════════════════════╣');
     print('║ ᚠ Nama     : ${nama.padRight(37)}║');
     print('║ 𐌰 Level    : ${level.toString().padRight(37)}║');
@@ -44,7 +46,8 @@ class Profile {
 }
 
 void main() {
-  Profile profile = Profile(); //pemahaman nya seperti [className objectName = className();] || atau kalau belum paham kayak gini versi ku [Obj1 ObjClass = Obj1();]
+  Profile profile =
+      Profile(); //pemahaman nya seperti [className objectName = className();] || atau kalau belum paham kayak gini versi ku [Obj1 ObjClass = Obj1();]
 
   // stdout.write('Masukkan nama karakter: ');
   // profile.nama = stdin.readLineSync()!;
@@ -56,8 +59,8 @@ void main() {
   // profile.kekayaan = int.parse(stdin.readLineSync()!);
 
   // profile.tampilkanProfil();
-
-  stdout.write('start\n 1. login profil\n 2. start adventure\n 3. shop\n 4. inventory\n 5. exit\n');
+  while (true){
+  stdout.write('start\n 1. login profil\n 2. start adventure\n 3. shop\n 4. inventory\n 5. exit\n', );
   String? inputUser = stdin.readLineSync();
   switch (inputUser) {
     case '1':
@@ -76,6 +79,33 @@ void main() {
       stdout.write('Adventure started!\n');
       break;
     case '3':
-    break;
-  }
-}
+      print('Welcome to the shop!');
+      print("we have weapone for now because the dev is lazy to add more");
+      print("btw here all the list of weapon and their price");
+      stdout.write(
+        '1. Sword - 1000 gold\n 2. Axe - 800 gold\n 3. Dagger - 500 gold\n',
+      );
+      String? inputShop = stdin.readLineSync();
+      switch (inputShop) {
+        case '1':
+          if (profile.kekayaan >= 1000) {
+            profile.kekayaan -= 1000;
+            stdout.write(
+              'You bought a Sword! Remaining gold: ${profile.kekayaan}\n',
+            );
+          } else {
+            stdout.write('Not enough gold to buy a Sword.\n');
+          }
+          break;
+      }//choice shop
+    case '4':
+      print('Inventory is empty for now, cuz too lazy');
+      break;  
+    case '5':
+      stdout.write('Exiting the game. Goodbye!\n');
+      return; // Exit the loop and end the program
+    default:
+      stdout.write('Unrecognized input: $inputUser\n YANG BENAR LAH BACANYA');
+  }//choice
+} //void main
+}//loop until exit
