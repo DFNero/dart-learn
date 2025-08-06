@@ -1,5 +1,15 @@
 import 'dart:io';
 
+
+
+class basedExp {
+  int found = 200; //exp found
+  int goblin = 500; //exp goblin
+  int orc = 1000; //exp orc
+  int undead = 1500; //exp undead
+  
+}
+
 class Profile {
   String nama = '';
   int level = 0;
