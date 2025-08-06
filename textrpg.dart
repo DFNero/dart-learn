@@ -1,13 +1,18 @@
 import 'dart:io';
 
+class weaponDmg {
+  int sword = 75; //dmg sword
+  int axe = 50; //dmg axe
+  int dagger = 25; //dmg bow
+}
 
-class chestGold{
+class chestGold {
   int woodChest = 150; //gold wood chest
   int bigChest = 500; //gold big chest
   int goldChest = 1000; //gold gold chest
 }
 
-class basedGold{
+class basedGold {
   int goblin = 500; //gold goblin
   int orc = 1000; //gold orc
   int undead = 1500; //gold undead
@@ -18,26 +23,29 @@ class basedExp {
   int goblin = 500; //exp goblin
   int orc = 1000; //exp orc
   int undead = 1500; //exp undead
-  
 }
 
 class Profile {
   String nama = '';
-  int level = 0;
+  int level = 1;
   int kekayaan = 0;
 
   void tampilkanProfil() {
-    print("||PROFIL KARAKTER||");
-    print('===================');
-    print('Nama: $nama');
-    print('Level: $level');
-    print('Kekayaan: $kekayaan');
+    print('');
+    print('╔══════════════════════════════════════════════════╗');
+    print('║          🕯️        𝕻𝖗𝖔𝖋𝖎𝖑 𝕶𝖆𝖗𝖆𝖐𝖙𝖊𝖗      🕯️         ║');
+    print('╠══════════════════════════════════════════════════╣');
+    print('║ ᚠ Nama     : ${nama.padRight(37)}║');
+    print('║ 𐌰 Level    : ${level.toString().padRight(37)}║');
+    print('║ ¥ Kekayaan : ${kekayaan.toString().padRight(37)}║');
+    print('╚══════════════════════════════════════════════════╝');
+    print('');
   }
 }
 
 void main() {
-  Profile profile = Profile(); //pemahaman nya seperti [className objectName = className();] || atau kalau belum paham kayak gini versi ku [Obj1 ObjClass = Obj1();]
-
+  Profile profile =
+      Profile(); //pemahaman nya seperti [className objectName = className();] || atau kalau belum paham kayak gini versi ku [Obj1 ObjClass = Obj1();]
 
   stdout.write('Masukkan nama karakter: ');
   profile.nama = stdin.readLineSync()!;
@@ -48,5 +56,5 @@ void main() {
   stdout.write('Masukkan mau berapa kekayaan: ');
   profile.kekayaan = int.parse(stdin.readLineSync()!);
 
-  profile.tampilkanProfil();  
+  profile.tampilkanProfil();
 }
