@@ -33,9 +33,7 @@ class Profile {
   void tampilkanProfil() {
     print('');
     print('╔══════════════════════════════════════════════════╗');
-    print(
-      '║          🕯️        𝕻𝖗𝖔𝖋𝖎𝖑 𝕶𝖆𝖗𝖆𝖐𝖙𝖊𝖗      🕯️         ║',
-    );
+    print('║          🕯️        𝕻𝖗𝖔𝖋𝖎𝖑 𝕶𝖆𝖗𝖆𝖐𝖙𝖊𝖗      🕯️         ║',);
     print('╠══════════════════════════════════════════════════╣');
     print('║ ᚠ Nama     : ${nama.padRight(37)}║');
     print('║ 𐌰 Level    : ${level.toString().padRight(37)}║');
@@ -46,8 +44,7 @@ class Profile {
 }
 
 void main() {
-  Profile profile =
-      Profile(); //pemahaman nya seperti [className objectName = className();] || atau kalau belum paham kayak gini versi ku [Obj1 ObjClass = Obj1();]
+  Profile profile = Profile(); //pemahaman nya seperti [className objectName = className();] || atau kalau belum paham kayak gini versi ku [Obj1 ObjClass = Obj1();]
 
   // stdout.write('Masukkan nama karakter: ');
   // profile.nama = stdin.readLineSync()!;
@@ -59,6 +56,7 @@ void main() {
   // profile.kekayaan = int.parse(stdin.readLineSync()!);
 
   // profile.tampilkanProfil();
+
   while (true){
   stdout.write('start\n 1. login profil\n 2. start adventure\n 3. shop\n 4. inventory\n 5. exit\n', );
   String? inputUser = stdin.readLineSync();
