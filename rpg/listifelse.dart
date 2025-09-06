@@ -42,7 +42,7 @@ void main() {
           print(
             "1. pensil \n 2. spidol \n 3. kertas \n 4. laptop fairuz \n 5. exit",
           );
-          String? inputShop = stdin.readLineSync();
+          String? inputShop = stdin.readLineSync(); 
           switch (inputShop) {
             case '1':
               if (pembeli.uang >= 2000) {
