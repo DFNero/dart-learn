@@ -201,10 +201,62 @@ class StoryGame {
           break;
         }
       }
-
       //end chapter 4
       // chapter 5
+      else if (step == 5) {
+        print("\n🎯 Karena jadi MVP, Jancarsok mulai dilirik tim pro lokal.");
+        sleep(Duration(seconds: 2));
+
+        print("Tapi dia punya dua pilihan:");
+        sleep(Duration(seconds: 2));
+
+        print("1️⃣ Terus latihan dan disiplin → prestasinya makin meningkat.");
+        sleep(Duration(seconds: 2));
+        print("2️⃣ Terlena popularitas → prestasi menurun dan dilupakan.");
+        sleep(Duration(seconds: 2));
+
+        while (true) {
+          stdout.write("Apakah Jancarsok memilih terus latihan? (y/n): ");
+          String? ans = stdin.readLineSync();
+
+          switch (ans) {
+            case "y":
+            case "1":
+              print("✅ Jancarsok tetap fokus latihan, prestasinya makin naik!");
+              sleep(Duration(seconds: 2));
+              step = 6;
+              break;
+
+            case "n":
+            case "2":
+              print(
+                "❌ Jancarsok terlena popularitas, akhirnya prestasinya menurun dan ia dilupakan. Cerita selesai.",
+              );
+              sleep(Duration(seconds: 2));
+              break;
+
+            default:
+              print("⚠️ Input tidak valid. Coba lagi!");
+              continue;
+          }
+          break;
+        }
+      }
       // end chapter 5
+      // chapter 6
+      
+      // end chapter 6
+      // chapter 7
+      // end chapter 7
+      // chapter 8
+      // end chapter 8
+      // chapter 9
+      // end chapter 9
+      // chapter 10
+      // end chapter 10
+      // chapter 11
+      // end chapter 11 
+
     }
   }
 }
