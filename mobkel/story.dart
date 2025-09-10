@@ -244,19 +244,228 @@ class StoryGame {
       }
       // end chapter 5
       // chapter 6
-      
+      else if (step == 6) {
+        print(
+          "\n📜 Tim pro menawarkan kontrak pada Jancarsok, tapi ada syarat: sekolah harus tetap dijalani.",
+        );
+        sleep(Duration(seconds: 2));
+
+        print("1️⃣ Atur waktu sekolah & latihan → sukses di dua dunia.");
+        sleep(Duration(seconds: 2));
+        print("2️⃣ Abaikan sekolah → drop out dan menyesal.");
+        sleep(Duration(seconds: 2));
+
+        while (true) {
+          stdout.write("Apakah Jancarsok mau atur waktu dengan baik? (y/n): ");
+          String? ans = stdin.readLineSync();
+
+          switch (ans) {
+            case "y":
+            case "1":
+              print(
+                "✅ Jancarsok berhasil atur waktu. Nilai tetap bagus, karier Esports juga naik!",
+              );
+              sleep(Duration(seconds: 2));
+              step = 7;
+              break;
+
+            case "n":
+            case "2":
+              print(
+                "❌ Jancarsok abaikan sekolah, akhirnya DO dan kariernya hancur. Cerita selesai.",
+              );
+              sleep(Duration(seconds: 2));
+              break;
+
+            default:
+              print("⚠️ Input tidak valid.");
+              continue;
+          }
+          break;
+        }
+      }
       // end chapter 6
       // chapter 7
+      else if (step == 7) {
+        print(
+          "\n👦 Teman satu kelas, Dimas, mengajak Jancarsok ikut tim game online lokal.",
+        );
+        sleep(Duration(seconds: 2));
+
+        print("1️⃣ Terima → dapat pengalaman & teman baru.");
+        sleep(Duration(seconds: 2));
+        print("2️⃣ Tolak → tetap fokus ke tim sekolah.");
+        sleep(Duration(seconds: 2));
+
+        while (true) {
+          stdout.write("Apakah Jancarsok menerima ajakan Dimas? (y/n): ");
+          String? ans = stdin.readLineSync();
+
+          switch (ans) {
+            case "y":
+            case "1":
+              print("✅ Jancarsok gabung tim Dimas, pengalaman bertambah!");
+              sleep(Duration(seconds: 2));
+              step = 8;
+              break;
+
+            case "n":
+            case "2":
+              print("❌ Jancarsok tolak ajakan, ia tetap fokus ke tim SMA.");
+              sleep(Duration(seconds: 2));
+              step = 8; // tetap lanjut, cuma beda story
+              break;
+
+            default:
+              print("⚠️ Input tidak valid!");
+              continue;
+          }
+          break;
+        }
+      }
       // end chapter 7
       // chapter 8
+      else if (step == 8) {
+        print(
+          "\n🎮 Tim Dimas dan tim sekolah mengadakan kompetisi online bersama.",
+        );
+        sleep(Duration(seconds: 2));
+
+        print("1️⃣ Bentuk kombinasi tim → makin kuat.");
+        sleep(Duration(seconds: 2));
+        print("2️⃣ Fokus tim sekolah → tetap solid tapi kurang variasi.");
+        sleep(Duration(seconds: 2));
+
+        while (true) {
+          stdout.write("Apakah Jancarsok mau bentuk kombinasi tim? (y/n): ");
+          String? ans = stdin.readLineSync();
+
+          switch (ans) {
+            case "y":
+            case "1":
+              print(
+                "✅ Tim kombinasi jadi sangat kuat! Prestasi makin cemerlang.",
+              );
+              sleep(Duration(seconds: 2));
+              step = 9;
+              break;
+
+            case "n":
+            case "2":
+              print(
+                "ℹ️ Jancarsok tetap fokus dengan tim SMA. Solid, tapi tidak ada variasi strategi.",
+              );
+              sleep(Duration(seconds: 2));
+              step = 9;
+              break;
+
+            default:
+              print("⚠️ Input tidak valid.");
+              continue;
+          }
+          break;
+        }
+      }
       // end chapter 8
       // chapter 9
+      else if (step == 9) {
+        print(
+          "\n👩 Ada murid perempuan bernama Lintang yang tertarik dengan dunia Esports.",
+        );
+        sleep(Duration(seconds: 2));
+
+        print("1️⃣ Dekati dan jelaskan → Lintang jadi support system.");
+        sleep(Duration(seconds: 2));
+        print("2️⃣ Abaikan → Jancarsok kehilangan kesempatan teman baru.");
+        sleep(Duration(seconds: 2));
+
+        while (true) {
+          stdout.write("Apakah Jancarsok mendekati Lintang? (y/n): ");
+          String? ans = stdin.readLineSync();
+
+          switch (ans) {
+            case "y":
+            case "1":
+              print(
+                "💖 Lintang jadi support system yang selalu mendukung Jancarsok!",
+              );
+              sleep(Duration(seconds: 2));
+              step = 10;
+              break;
+
+            case "n":
+            case "2":
+              print("❌ Jancarsok abaikan Lintang. Ia tetap berjuang sendiri.");
+              sleep(Duration(seconds: 2));
+              step = 10;
+              break;
+
+            default:
+              print("⚠️ Input tidak valid.");
+              continue;
+          }
+          break;
+        }
+      }
       // end chapter 9
       // chapter 10
+      else if (step == 10) {
+        print("\n🏅 Tim SMA Jancarsok lolos ke tingkat nasional!");
+        sleep(Duration(seconds: 2));
+
+        print("1️⃣ Berangkat dengan semangat → peluang juara nasional.");
+        sleep(Duration(seconds: 2));
+        print("2️⃣ Menolak karena takut gagal → kesempatan hilang.");
+        sleep(Duration(seconds: 2));
+
+        while (true) {
+          stdout.write(
+            "Apakah Jancarsok berangkat ke turnamen nasional? (y/n): ",
+          );
+          String? ans = stdin.readLineSync();
+
+          switch (ans) {
+            case "y":
+            case "1":
+              print(
+                "🔥 Jancarsok tampil di nasional, bertemu pro player, dan dapat sponsor!",
+              );
+              sleep(Duration(seconds: 2));
+              step = 11;
+              break;
+
+            case "n":
+            case "2":
+              print(
+                "❌ Jancarsok menolak ikut. Kesempatan karier hilang selamanya.",
+              );
+              sleep(Duration(seconds: 2));
+              break;
+
+            default:
+              print("⚠️ Input tidak valid.");
+              continue;
+          }
+          break;
+        }
+      }
       // end chapter 10
       // chapter 11
-      // end chapter 11 
+      else if (step == 11) {
+        print("\n🎉 Tim SMA Jancarsok berhasil memenangkan turnamen nasional!");
+        sleep(Duration(seconds: 2));
 
+        print(
+          "📢 Nama Jancarsok semakin dikenal, sponsor berdatangan, dan jalan menuju karier Esports profesional terbuka lebar.",
+        );
+        sleep(Duration(seconds: 2));
+
+        print(
+          "\n🥳 SELAMAT! Kamu sudah menamatkan cerita Jancarsok sampai akhir.",
+        );
+      }
+
+      // end chapter 11
     }
   }
 }
