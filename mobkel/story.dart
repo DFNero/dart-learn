@@ -2,7 +2,7 @@ import 'dart:io';
 
 class StoryGame {
   void start() {
-    int step = 1;
+    int step = 10;
 
     while (true) {
       // chapter 1
@@ -183,7 +183,7 @@ class StoryGame {
                 "✅ Jancarsok memilih fokus latihan untuk meningkatkan skill.",
               );
               sleep(Duration(seconds: 2));
-              step = 5; // bisa lanjut chapter berikutnya
+              step = 5; 
               break;
 
             case "n":
@@ -313,7 +313,7 @@ class StoryGame {
             case "2":
               print("❌ Jancarsok tolak ajakan, ia tetap fokus ke tim SMA.");
               sleep(Duration(seconds: 2));
-              step = 8; // tetap lanjut, cuma beda story
+              step = 8;
               break;
 
             default:
@@ -395,9 +395,8 @@ class StoryGame {
 
             case "n":
             case "2":
-              print("❌ Jancarsok abaikan Lintang. Ia tetap berjuang sendiri.");
+              print("❌ Jancarsok abaikan Lintang. Ia tetap berjuang sendiri.\nnamun gagal mendapatkan support system yang baik dan kalah sampe hancur karir dan menjadi anak npc normal\nCerita selesai.");
               sleep(Duration(seconds: 2));
-              step = 10;
               break;
 
             default:
@@ -463,8 +462,8 @@ class StoryGame {
         print(
           "\n🥳 SELAMAT! Kamu sudah menamatkan cerita Jancarsok sampai akhir.",
         );
+        break; // keluar dari while utama, cerita selesai
       }
-
       // end chapter 11
     }
   }
